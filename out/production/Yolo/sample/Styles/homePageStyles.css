@@ -1,0 +1,57 @@
+.root{
+  bg-color :#1a1a2e;
+  text-color :white;
+  highlight-color :rgba(255, 255, 255, 0.2);
+}
+#container {
+ -fx-background-color : bg-color;
+}
+.button{
+   -fx-background-color : transparent;
+   -fx-background-radius : 0;
+   -fx-text-fill: text-color;
+}
+#home:hover{
+  -fx-background-color : highlight-color;
+}
+#exitBtn:hover{
+   -fx-background-color : #ec0101;
+}
+#fullScreen:hover{
+  -fx-background-color: highlight-color;
+}
+#videoBtn{
+  -fx-background-color: #e5657e;
+}
+#videoBtn, #cameraBtn{
+  -fx-background-radius :5;
+}
+#videoBtn:hover, #cameraBtn:hover{
+  -fx-effect : innershadow(gaussian, rgba(0,0,0,.2), 20, 0.2, 0, 0);
+}
+#cameraBtn{
+  -fx-background-color: #e94560;
+}
+
+/* ----------- Styling the Menu bar ----------- */
+.menu-bar {
+ -fx-background-color : transparent;
+ -fx-padding : 0;
+}
+.menu {
+  -fx-background-color : transparent;
+}
+.menu-item {
+  -fx-padding : 3 25 3 5;
+}
+.menu .label, .menu-item .label{
+  -fx-text-fill : text-color;
+}
+.menu:hover, .menu-item:hover{
+   -fx-background-color : highlight-color;
+}
+.context-menu {
+  -fx-background-color : bg-color;
+  -fx-background-insets : 0, 1, 2;
+  -fx-padding : 0;
+}

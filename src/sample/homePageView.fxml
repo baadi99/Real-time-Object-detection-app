@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="container" minHeight="600" minWidth="720" stylesheets="@Styles/homePageStyles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomePageController">
+   <top>
+      <HBox alignment="TOP_RIGHT">
+         <Button fx:id="fullScreen" onMouseClicked="#enterFullScreen" prefHeight="25.0" prefWidth="40.0">
+            <graphic>
+               <ImageView fx:id="enterExitFullScreenIcon" fitHeight="15" fitWidth="15" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@Icones/fullScreenIcon.png" />
+               </ImageView>
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Button fx:id="exitBtn" onMouseClicked="#exit" prefHeight="25.0" prefWidth="40.0">
+            <graphic>
+               <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@Icones/exitIcon.png" />
+               </ImageView>
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+      </HBox>
+   </top>
+   <center>
+      <GridPane alignment="center" hgap="10">
+            <Button fx:id="videoBtn" onAction="#showDialog" prefHeight="25.0" prefWidth="150" text="Choose File" GridPane.rowIndex="1">
+            <graphic>
+               <ImageView fitHeight="32" fitWidth="32" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@Icones/chooseFileIcon.png" />
+               </ImageView>
+            </graphic>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+           </Button>
+            <Button fx:id="cameraBtn" onAction="#openCamera" prefHeight="25.0" prefWidth="150" text="Open Camera" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="32" fitWidth="32" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@Icones/cameraIcon.png" />
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+
+      </GridPane>
+   </center>
+</BorderPane>

@@ -125,7 +125,7 @@ public class videoController {
                     net.forward(result, outBlobNames); // Feed forward the model to get output
 
                     List<Integer> classesIDs = new ArrayList<>(); // stores the classes' ids of the detected objects
-                    List<Float> probabilities = new ArrayList<>(); // stores the classes' ids of the detected objects
+                    List<Float> probabilities = new ArrayList<>(); 
                     List<Rect> boundingBoxes = new ArrayList<>();
 
                     for (Mat level : result) {
@@ -149,7 +149,6 @@ public class videoController {
 
                                 classesIDs.add((int) classIdPoint.x);
                                 probabilities.add(confidence);
-                                //System.out.println(names[(int) classIdPoint.x] + " Detected!");
                                 boundingBoxes.add(new Rect(left, top, width, height));
                             }
                         }
